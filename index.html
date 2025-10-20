@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kmablab - Çok Yakında</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      position: relative;
+      color: white;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2em;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    }
+
+    .center-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 2.5em;
+      opacity: 0;
+      animation: fadeIn 2s forwards, pulse 2s infinite 2s;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.05);
+      }
+    }
+
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.15;
+      animation: float 10s infinite linear;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+      top: 80%;
+      left: 10%;
+      animation-duration: 18s;
+    }
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent;
+      border-bottom: 100px solid white;
+      opacity: 0.1;
+      top: 30%;
+      left: 70%;
+      animation-duration: 25s;
+    }
+
+    .square {
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      opacity: 0.1;
+      top: 60%;
+      left: 40%;
+      animation-duration: 22s;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-40px) rotate(180deg);
+      }
+      100% {
+        transform: translateY(0) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">kmablab</div>
+
+  <div class="center-text">ÇOK YAKINDA<br>HİZMETİNİZDE</div>
+
+  <!-- Arka plan şekilleri -->
+  <div class="shape circle"></div>
+  <div class="shape triangle"></div>
+  <div class="shape square"></div>
+
+</body>
+</html>
